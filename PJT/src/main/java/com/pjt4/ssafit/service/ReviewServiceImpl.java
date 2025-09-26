@@ -1,31 +1,50 @@
 package com.pjt4.ssafit.service;
 
-import com.pjt4.ssafit.dto.User.User;
+import java.util.List;
 
-public class ReviewServiceImpl implements UserService {
+import com.pjt4.ssafit.dto.User.Review;
+import com.pjt4.ssafit.repository.ReviewRepository;
+import com.pjt4.ssafit.repository.ReviewRepositoryImpl;
 
+public class ReviewServiceImpl implements ReviewService {
+
+	
+	private static ReviewService service = new ReviewServiceImpl();
+	private ReviewRepository repo = ReviewRepositoryImpl.getInstance();
+	
+	private ReviewServiceImpl(){
+		
+	}
+	
+	public static ReviewService getInstance() {
+		return service;
+		
+	}
 	@Override
-	public User getUser(String userId) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Review> getList() {
+		return repo.selectAll();
 	}
 
 	@Override
-	public boolean RegistUser(User user) {
-		// TODO Auto-generated method stub
-		return false;
+	public Review getReview(int id) {
+		repo.updateViewCnt(id);
+		return repo.selectOne(id);
 	}
 
 	@Override
-	public boolean modifyUser(User user) {
-		// TODO Auto-generated method stub
-		return false;
+	public void writeReview(Review review) {
+		repo.insertReview(review);
 	}
 
 	@Override
-	public boolean removeUser(String userId, String userPw) {
-		// TODO Auto-generated method stub
-		return false;
+	public void modifyReview(Review review) {
+		repo.updateReview(review);
 	}
+
+	@Override
+	public void removeReview(int id) {
+		repo.deleteReview(id);
+	}
+
 
 }
