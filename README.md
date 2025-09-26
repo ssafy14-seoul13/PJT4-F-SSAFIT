@@ -50,43 +50,47 @@
 
 # 4. 프로젝트 구조
 ```
- ssafit/
+ssafit/
 ├── src/
 │   ├── main/
 │   │   ├── java/
-│   │   │   └── com/
-│   │   │      └── pjt4/
-│   │   │         └── ssafit/
-│   │   │            ├── controller/      
-│   │   │            │   ├── VideoController.java
-│   │   │            │   ├── ReviewController.java
-│   │   │            │   └── UserController.java
-│   │   │            ├── service/              
-│   │   │            │   ├── VideoService.java
-│   │   │            │   ├── VideoServiceImpl.java
-│   │   │            │   ├── ReviewService.java
-│   │   │            │   ├── ReviewServiceImpl.java
-│   │   │            │   ├── UserServiceImpl.java
-│   │   │            │   └── UserService.java
-│   │   │            ├── repository/        
-│   │   │            │   ├── VideoRepository.java
-│   │   │            │   ├── VideoRepositoryImpl.java
-│   │   │            │   ├── ReviewRepository.java
-│   │   │            │   ├── ReviewRepositoryImpl.java
-│   │   │            │   └── UserRepository.java
-│   │   │            ├── dto/        
-│   │   │            │   ├── Video.java
-│   │   │            │   ├── Review.java
-│   │                    └── User.java
-│   └── webapp/    
+│   │   │   └── com/pjt4/ssafit/
+│   │   │       ├── controller/
+│   │   │       │   ├── ReviewController.java
+│   │   │       │   ├── UserController.java
+│   │   │       │   └── VideoController.java
+│   │   │       ├── dto/
+│   │   │       │   ├── Review.java
+│   │   │       │   ├── User.java
+│   │   │       │   └── Video.java
+│   │   │       ├── repository/
+│   │   │       │   ├── ReviewRepository.java
+│   │   │       │   ├── ReviewRepositoryImpl.java
+│   │   │       │   ├── UserRepository.java
+│   │   │       │   ├── VideoRepository.java
+│   │   │       │   └── VideoRepositoryImpl.java
+│   │   │       └── service/
+│   │   │           ├── ReviewService.java
+│   │   │           ├── ReviewServiceImpl.java
+│   │   │           ├── UserService.java
+│   │   │           ├── UserServiceImpl.java
+│   │   │           ├── VideoService.java
+│   │   │           └── VideoServiceImpl.java
+│   └── webapp/
 │       ├── WEB-INF/
-│       │   └── user/            
-│       │       ├── view.jsp          
-│       │       ├── login.jsp           
-│       │       └── regist.jsp         
-│       │   └── video/            
-│       │       ├── view.jsp          
-│       │       ├── detail.jsp          
-│       └── index.jsp            
-└── README.md                     (프로젝트 설명)
+│       │   ├── review/
+│       │   │   ├── detail.jsp
+│       │   │   ├── list.jsp
+│       │   │   ├── view.jsp
+│       │   │   └── writeform.jsp
+│       │   ├── user/
+│       │   │   ├── login.jsp
+│       │   │   ├── regist.jsp
+│       │   │   └── view.jsp
+│       │   └── video/
+│       │       ├── detail.jsp
+│       │       └── view.jsp
+│       └── index.jsp
+└── README.md
+
 ```
