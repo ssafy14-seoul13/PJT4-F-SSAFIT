@@ -2,10 +2,10 @@
 - 팀장: 규봉
 - 팀원: 소연, 정현
 
-#SSAFIT
+# SSAFIT
 
 ## 0. 프로젝트 구조
-ssafit/
+```
  ├── src/
  │   ├── controller/
  │   │    ├── FrontController.java
@@ -41,3 +41,4 @@ ssafit/
  │   │    └── list.jsp
  │   └── member/
  │        └── login.jsp
+```
