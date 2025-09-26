@@ -50,48 +50,74 @@
 
 # 4. 프로젝트 구조
 ```
- ssafit/
+ssafit/
 ├── src/
 │   ├── main/
 │   │   ├── java/
-│   │   │   └── com/
-│   │   │      └── pjt4/
-│   │   │         └── ssafit/
-│   │   │            ├── controller/      
-│   │   │            │   ├── VideoController.java
-│   │   │            │   ├── ReviewController.java
-│   │   │            │   └── UserController.java
-│   │   │            ├── service/              
-│   │   │            │   ├── VideoService.java
-│   │   │            │   ├── VideoServiceImpl.java
-│   │   │            │   ├── ReviewService.java
-│   │   │            │   ├── ReviewServiceImpl.java
-│   │   │            │   ├── UserServiceImpl.java
-│   │   │            │   └── UserService.java
-│   │   │            ├── repository/        
-│   │   │            │   ├── VideoRepository.java
-│   │   │            │   ├── VideoRepositoryImpl.java
-│   │   │            │   ├── ReviewRepository.java
-│   │   │            │   ├── ReviewRepositoryImpl.java
-│   │   │            │   └── UserRepository.java
-│   │   │            ├── dto/        
-│   │   │            │   ├── Video.java
-│   │   │            │   ├── Review.java
-│   │                    └── User.java
-│   └── webapp/    
+│   │   │   └── com/pjt4/ssafit/
+│   │   │       ├── controller/
+│   │   │       │   ├── ReviewController.java
+│   │   │       │   ├── UserController.java
+│   │   │       │   └── VideoController.java
+│   │   │       ├── dto/
+│   │   │       │   ├── Review.java
+│   │   │       │   ├── User.java
+│   │   │       │   └── Video.java
+│   │   │       ├── repository/
+│   │   │       │   ├── ReviewRepository.java
+│   │   │       │   ├── ReviewRepositoryImpl.java
+│   │   │       │   ├── UserRepository.java
+│   │   │       │   ├── VideoRepository.java
+│   │   │       │   └── VideoRepositoryImpl.java
+│   │   │       └── service/
+│   │   │           ├── ReviewService.java
+│   │   │           ├── ReviewServiceImpl.java
+│   │   │           ├── UserService.java
+│   │   │           ├── UserServiceImpl.java
+│   │   │           ├── VideoService.java
+│   │   │           └── VideoServiceImpl.java
+│   └── webapp/
 │       ├── WEB-INF/
-│       │   └── user/            
-│       │       ├── view.jsp          
-│       │       ├── login.jsp           
-│       │       └── regist.jsp         
-│       │   └── video/            
-│       │       ├── view.jsp          
-│       │       ├── detail.jsp          
-│       └── index.jsp            
-└── README.md                     (프로젝트 설명)
-```
+│       │   ├── review/
+│       │   │   ├── detail.jsp
+│       │   │   ├── list.jsp
+│       │   │   ├── view.jsp
+│       │   │   └── writeform.jsp
+│       │   ├── user/
+│       │   │   ├── login.jsp
+│       │   │   ├── regist.jsp
+│       │   │   └── view.jsp
+│       │   └── video/
+│       │       ├── detail.jsp
+│       │       └── view.jsp
+│       └── index.jsp
+└── README.md
 
-# 5. 소감
+```
+<br>
+
+# 5. 구현 화면 예시
+
+### 1. 회원가입 화면
+![회원가입 화면](images/회원가입화면.png)
+
+### 2. 로그인 화면
+![로그인 화면](images/로그인화면.png)
+
+### 3. 영상 등록 화면
+![영상 등록](images/영상등록.png)
+
+### 4. 영상 목록 조회 화면
+![영상 목록 조회](images/영상목록조회.png)
+
+### 5. 리뷰 게시판 화면
+![리뷰 게시판](images/리뷰게시판.png)
+
+### 6. 리뷰 목록 조회 화면
+![리뷰 목록 조회](images/리뷰목록조회.png)
+
+
+# 6. 소감
 이번 Back 관통 프로젝트를 진행하면서 MVC 패턴을 직접 설계하고 구현하면서 백엔드 개발을 경험해볼 수 있는 기회여서 좋았습니다.
 
 Service, Repository 계층을 싱글턴 패턴으로 만들고 SOLID 5원칙 중 하나인 의존성 주입을 적용하여 구현하는 과정이 편리한 방법이라는 것을 알게되었습니다.
