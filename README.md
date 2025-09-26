@@ -55,53 +55,38 @@
 │   ├── main/
 │   │   ├── java/
 │   │   │   └── com/
-│   │   │       └── ssafit/
-│   │   │           ├── controller/           (HTTP 요청을 처리하고 결과를 반환하는 역할)
-│   │   │           │   ├── MainController.java
-│   │   │           │   ├── VideoController.java
-│   │   │           │   ├── ReviewController.java
-│   │   │           │   └── MemberController.java
-│   │   │           ├── service/              (비즈니스 로직을 구현하는 핵심 영역)
-│   │   │           │   ├── VideoService.java
-│   │   │           │   ├── ReviewService.java
-│   │   │           │   └── MemberService.java
-│   │   │           ├── repository/           (데이터베이스와 통신하는 역할)
-│   │   │           │   ├── VideoRepository.java
-│   │   │           │   ├── ReviewRepository.java
-│   │   │           │   └── MemberRepository.java
-│   │   │           ├── dto/                  (계층 간 데이터 교환에 사용되는 객체)
-│   │   │           │   ├── Video.java
-│   │   │           │   ├── Review.java
-│   │   │           │   └── Member.java
-│   │   │           └── util/                 (공통적으로 사용되는 유틸리티 클래스)
-│   │   │               ├── DBUtil.java         (데이터베이스 연결 관리)
-│   │   │               └── Constants.java      (공통 상수 관리)
-│   │   └── resources/            (설정 파일 및 정적 리소스)
-│   │       └── mapper/
-│   │           ├── VideoMapper.xml
-│   │           ├── ReviewMapper.xml
-│   │           └── MemberMapper.xml
-│   └── webapp/                   (웹페이지와 리소스가 위치)
-│       ├── css/
-│       │   └── style.css
-│       ├── js/
-│       │   ├── video.js
-│       │   └── member.js
-│       ├── images/
-│       │   └── logo.png
+│   │   │      └── pjt4/
+│   │   │         └── ssafit/
+│   │   │            ├── controller/      
+│   │   │            │   ├── VideoController.java
+│   │   │            │   ├── ReviewController.java
+│   │   │            │   └── UserController.java
+│   │   │            ├── service/              
+│   │   │            │   ├── VideoService.java
+│   │   │            │   ├── VideoServiceImpl.java
+│   │   │            │   ├── ReviewService.java
+│   │   │            │   ├── ReviewServiceImpl.java
+│   │   │            │   ├── UserServiceImpl.java
+│   │   │            │   └── UserService.java
+│   │   │            ├── repository/        
+│   │   │            │   ├── VideoRepository.java
+│   │   │            │   ├── VideoRepositoryImpl.java
+│   │   │            │   ├── ReviewRepository.java
+│   │   │            │   ├── ReviewRepositoryImpl.java
+│   │   │            │   └── UserRepository.java
+│   │   │            ├── dto/        
+│   │   │            │   ├── Video.java
+│   │   │            │   ├── Review.java
+│   │                    └── User.java
+│   └── webapp/    
 │       ├── WEB-INF/
-│       │   ├── web.xml           (웹 애플리케이션 배포 설명자)
-│       │   └── views/            (JSP 파일들이 위치)
-│       │       ├── layout/
-│       │       │   ├── header.jsp
-│       │       │   └── footer.jsp
-│       │       ├── index.jsp           (메인 페이지)
-│       │       ├── login.jsp           (로그인 페이지)
-│       │       ├── signup.jsp          (회원가입 페이지)
-│       │       ├── videoList.jsp       (영상 목록 페이지)
-│       │       ├── videoDetail.jsp     (영상 상세 페이지)
-│       │       └── myPage.jsp          (마이 페이지)
-│       └── index.html              (시작 페이지)
-├── pom.xml                       (Maven 프로젝트 의존성 및 설정 파일)
+│       │   └── user/            
+│       │       ├── view.jsp          
+│       │       ├── login.jsp           
+│       │       └── regist.jsp         
+│       │   └── video/            
+│       │       ├── view.jsp          
+│       │       ├── detail.jsp          
+│       └── index.jsp            
 └── README.md                     (프로젝트 설명)
 ```
