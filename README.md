@@ -11,7 +11,15 @@
 
 <br>
 
-## 1. 요구사항 분석 및 정리
+## 1. 준비 사항
+### 1. 사용 데이터
+- Youtube 영상 데이터 사용
+<br>
+### 2. 개발언어 및 툴
+- Java, STS, HTML, CSS, JavaScript, VScode, Tomcat
+<br>
+### 3. 필수 라이브러리 / 오픈소스
+- BootStrap Framework
 
 ## 2. 
 
