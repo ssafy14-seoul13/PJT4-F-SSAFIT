@@ -72,12 +72,10 @@ public class UserRepositoryImpl implements UserRepository{
 	@Override
 	public void removeUser(User user) {
 		
-		// 해당 userId를 삭제함
-		for(User user : userList) {
-			if(user.getUserId().equals(userId)) {
-				userList.remove(user);
-			}
-		}
+		// 해당 userId를 삭제
+		userList.remove(user);
+			
+		
 	}
 
 
