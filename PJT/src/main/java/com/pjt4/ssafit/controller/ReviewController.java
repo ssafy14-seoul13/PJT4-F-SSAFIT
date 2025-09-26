@@ -50,7 +50,7 @@ public class ReviewController extends HttpServlet {
 	private void doList(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<Review> list = service.getList();
 		request.setAttribute("list", list); 
-		request.getRequestDispatcher("/WEB-INF/review/list.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/review/view.jsp").forward(request, response);
 	}
 
 	private void doWrite(HttpServletRequest request, HttpServletResponse response) throws IOException {
