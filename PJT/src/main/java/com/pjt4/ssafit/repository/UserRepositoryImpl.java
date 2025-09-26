@@ -8,6 +8,7 @@ import com.pjt4.ssafit.dto.User.User;
 public class UserRepositoryImpl implements UserRepository{
 
 	List<User> userList = new ArrayList<>();
+	
 	private static UserRepository userRepo = new UserRepositoryImpl();
 	
 	private UserRepositoryImpl() {
@@ -36,13 +37,7 @@ public class UserRepositoryImpl implements UserRepository{
 
 	@Override
 	public void insertUser(User user) {
-		// 입력받은 userId를 이용중인 유저가 있는지 체크
-		for(User existUser: userList) {
-			// 이미 존재하는 유저가 있다면 리턴
-			if(existUser.getUserId().equals(user.getUserId())) return;
-		}
 		
-		// 없다면 userList에 추가
 		userList.add(user);
 	}
 
@@ -71,13 +66,7 @@ public class UserRepositoryImpl implements UserRepository{
 
 	@Override
 	public void removeUser(User user) {
-		
 		// 해당 userId를 삭제
 		userList.remove(user);
-			
-		
 	}
-
-
-
 }

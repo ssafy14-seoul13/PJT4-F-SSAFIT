@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public boolean modifyUser(User user) {
-		if(userRepo.selectOne(user.getUserId()) == null) {
+		if(userRepo.selectOne(user.getUserId()) != null) {
 			userRepo.updateUser(user);
 			return true;
 		}else {
