@@ -9,7 +9,7 @@ public interface VideoRepository {
 	public abstract List<Video> selectAll();
 
 	//영상 조회하기
-	public abstract Video selectOne(String id);
+	public abstract Video selectOne(int id);
 
 	//영상 등록하기
 	public abstract void insertVideo(Video video);

@@ -66,7 +66,7 @@ public class UserController extends HttpServlet{
 			session.setMaxInactiveInterval(60 * 10);
 			
 			// 영상 리스트 화면으로 이동
-			request.getRequestDispatcher("/WEB-INF/video/list.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/video/view.jsp").forward(request, response);
 		}
 	}
 	
@@ -113,7 +113,7 @@ public class UserController extends HttpServlet{
 			session.setAttribute("userId", userId);
 			session.setMaxInactiveInterval(60 * 10);
 			
-			request.getRequestDispatcher("/WEB-INF/user/view.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/video/view.jsp").forward(request, response);
 		}else {
 			request.setAttribute("errMsg", "이미 존재하지 않는 아이디입니다.");
 			request.getRequestDispatcher("/WEB-INF/user/regist.jsp").forward(request, response);			
@@ -136,7 +136,7 @@ public class UserController extends HttpServlet{
 			request.getRequestDispatcher("/WEB-INF/user/regist.jsp").forward(request, response);
 		}else {
 			request.setAttribute("errMsg", "이미 존재하지 않는 아이디입니다.");
-			request.getRequestDispatcher("/WEB-INF/user/view.jsp").forward(request, response);			
+			request.getRequestDispatcher("/WEB-INF/video/view.jsp").forward(request, response);			
 		}
 		
 	}

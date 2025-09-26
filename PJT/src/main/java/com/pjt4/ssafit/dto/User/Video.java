@@ -3,7 +3,6 @@ package com.pjt4.ssafit.dto.User;
 public class Video {
 	public static int no = 1;
     private int id;
-    private String videoId; // 유튜브 비디오 ID
     private String title;
     private String part; // 운동 부위
     private String url;
@@ -12,13 +11,11 @@ public class Video {
 	public Video() {
 	}
 	
-	public Video(String videoId, String title, String part, String url, int viewCnt) {
+	public Video(String title, String part, String url) {
 	    this.id = no++;
-	    this.videoId = videoId;
 	    this.title = title;
 	    this.part = part;
 	    this.url = url;
-	    this.viewCnt = viewCnt;
 	}
 	
 	// Getter와 Setter 메소드를 모두 추가해야 합니다.
@@ -30,13 +27,7 @@ public class Video {
 	    this.id = id;
 	}
 	
-	public String getVideoId() {
-	    return videoId;
-	}
-	
-	public void setVideoId(String videoId) {
-	    this.videoId = videoId;
-	}
+
 	
 	public String getTitle() {
 	    return title;
@@ -74,7 +65,6 @@ public class Video {
 	public String toString() {
 	    return "Video{" +
 	            "id=" + id +
-	            ", videoId='" + videoId + '\'' +
 	            ", title='" + title + '\'' +
 	            ", part='" + part + '\'' +
 	            ", url='" + url + '\'' +

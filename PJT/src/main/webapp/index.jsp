@@ -12,6 +12,7 @@
 	<a href="user?act=loginForm">로그인</a>
 	<a href="user?act=registForm">회원가입</a>
 	<!-- 영상관련 -->
+	<a href="video?act=videoForm">영상 리스트 보기</a>
 	<!-- 리뷰관련 -->
 </body>
 </html>

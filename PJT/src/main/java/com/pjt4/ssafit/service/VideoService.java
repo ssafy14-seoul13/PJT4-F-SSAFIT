@@ -8,7 +8,7 @@ public interface VideoService {
 	// 전체 게시글 조회
 	public abstract List<Video> getList();
 	// 유저 조회
-	public abstract Video getVideo(int videoId);
+	public abstract Video getVideo(int id);
 
 	// 유저 회원가입
 	public abstract boolean RegistVideo(Video video);
