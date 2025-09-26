@@ -7,11 +7,10 @@
 <title>메인화면</title>
 </head>
 <body>
-	
-	
+
 	<!-- 회원관련 -->
-	<a href="login">로그인</a>
-	<a href="regist">회원가입</a>
+	<a href="user?act=loginForm">로그인</a>
+	<a href="user?act=registForm">회원가입</a>
 	<!-- 영상관련 -->
 	<!-- 리뷰관련 -->
 </body>

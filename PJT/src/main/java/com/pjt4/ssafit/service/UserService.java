@@ -15,7 +15,7 @@ public interface UserService {
 		public abstract boolean modifyUser(User user);
 
 		// 유저 삭제
-		public abstract boolean removeUser(String userId, String userPw);
+		public abstract boolean removeUser(User user);
 
-	
+		
 }

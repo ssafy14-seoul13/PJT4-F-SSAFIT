@@ -8,6 +8,7 @@ import com.pjt4.ssafit.dto.User.User;
 public class UserRepositoryImpl implements UserRepository{
 
 	List<User> userList = new ArrayList<>();
+	
 	private static UserRepository userRepo = new UserRepositoryImpl();
 	
 	private UserRepositoryImpl() {
@@ -71,13 +72,7 @@ public class UserRepositoryImpl implements UserRepository{
 
 	@Override
 	public void removeUser(User user) {
-		
 		// 해당 userId를 삭제
 		userList.remove(user);
-			
-		
 	}
-
-
-
 }

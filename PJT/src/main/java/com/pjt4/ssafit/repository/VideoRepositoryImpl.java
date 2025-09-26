@@ -1,32 +1,43 @@
 package com.pjt4.ssafit.repository;
 
+import java.util.List;
+
 import com.pjt4.ssafit.dto.User.User;
+import com.pjt4.ssafit.dto.User.Video;
 import com.pjt4.ssafit.service.UserService;
 
-public class VideoRepositoryImpl implements UserService {
+public class VideoRepositoryImpl implements VideoRepository {
 
 	@Override
-	public User getUser(String userId) {
+	public List<Video> selectAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean RegistUser(User user) {
+	public Video selectOne(String id) {
 		// TODO Auto-generated method stub
-		return false;
+		return null;
 	}
 
 	@Override
-	public boolean modifyUser(User user) {
+	public void insertVideo(Video video) {
 		// TODO Auto-generated method stub
-		return false;
+		
 	}
 
 	@Override
-	public boolean removeUser(String userId, String userPw) {
+	public void updateVideo(Video video) {
 		// TODO Auto-generated method stub
-		return false;
+		
 	}
+
+	@Override
+	public void removeVideo(Video video) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 
 }
