@@ -70,7 +70,7 @@ public class UserRepositoryImpl implements UserRepository{
 	}
 
 	@Override
-	public void deleteUser(String userId, String userPw) {
+	public void removeUser(User user) {
 		
 		// 해당 userId를 삭제함
 		for(User user : userList) {

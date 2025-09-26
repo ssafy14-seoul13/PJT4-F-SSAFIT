@@ -50,8 +50,14 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public boolean removeUser(String userId, String userPw) {
+	public boolean removeUser(User user) {
 		
+		if(userRepo.selectOne(user.getUserId()) == null) {
+			userRepo.removeUser(user);
+			return true;
+		}else {
+			return false;
+		}
 		
 	}
 

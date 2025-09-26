@@ -18,7 +18,7 @@ public interface UserRepository {
 	public abstract void updateUser(User user);
 
 	//유저 삭제하기
-	public abstract void deleteUser(String userId);
+	public abstract void removeUser(User user);
 
 
 }
