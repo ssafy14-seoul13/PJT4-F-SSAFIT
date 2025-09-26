@@ -50,48 +50,74 @@
 
 # 4. 프로젝트 구조
 ```
- ssafit/
+ssafit/
 ├── src/
 │   ├── main/
 │   │   ├── java/
-│   │   │   └── com/
-│   │   │      └── pjt4/
-│   │   │         └── ssafit/
-│   │   │            ├── controller/      
-│   │   │            │   ├── VideoController.java
-│   │   │            │   ├── ReviewController.java
-│   │   │            │   └── UserController.java
-│   │   │            ├── service/              
-│   │   │            │   ├── VideoService.java
-│   │   │            │   ├── VideoServiceImpl.java
-│   │   │            │   ├── ReviewService.java
-│   │   │            │   ├── ReviewServiceImpl.java
-│   │   │            │   ├── UserServiceImpl.java
-│   │   │            │   └── UserService.java
-│   │   │            ├── repository/        
-│   │   │            │   ├── VideoRepository.java
-│   │   │            │   ├── VideoRepositoryImpl.java
-│   │   │            │   ├── ReviewRepository.java
-│   │   │            │   ├── ReviewRepositoryImpl.java
-│   │   │            │   └── UserRepository.java
-│   │   │            ├── dto/        
-│   │   │            │   ├── Video.java
-│   │   │            │   ├── Review.java
-│   │                    └── User.java
-│   └── webapp/    
+│   │   │   └── com/pjt4/ssafit/
+│   │   │       ├── controller/
+│   │   │       │   ├── ReviewController.java
+│   │   │       │   ├── UserController.java
+│   │   │       │   └── VideoController.java
+│   │   │       ├── dto/
+│   │   │       │   ├── Review.java
+│   │   │       │   ├── User.java
+│   │   │       │   └── Video.java
+│   │   │       ├── repository/
+│   │   │       │   ├── ReviewRepository.java
+│   │   │       │   ├── ReviewRepositoryImpl.java
+│   │   │       │   ├── UserRepository.java
+│   │   │       │   ├── VideoRepository.java
+│   │   │       │   └── VideoRepositoryImpl.java
+│   │   │       └── service/
+│   │   │           ├── ReviewService.java
+│   │   │           ├── ReviewServiceImpl.java
+│   │   │           ├── UserService.java
+│   │   │           ├── UserServiceImpl.java
+│   │   │           ├── VideoService.java
+│   │   │           └── VideoServiceImpl.java
+│   └── webapp/
 │       ├── WEB-INF/
-│       │   └── user/            
-│       │       ├── view.jsp          
-│       │       ├── login.jsp           
-│       │       └── regist.jsp         
-│       │   └── video/            
-│       │       ├── view.jsp          
-│       │       ├── detail.jsp          
-│       └── index.jsp            
-└── README.md                     (프로젝트 설명)
-```
+│       │   ├── review/
+│       │   │   ├── detail.jsp
+│       │   │   ├── list.jsp
+│       │   │   ├── view.jsp
+│       │   │   └── writeform.jsp
+│       │   ├── user/
+│       │   │   ├── login.jsp
+│       │   │   ├── regist.jsp
+│       │   │   └── view.jsp
+│       │   └── video/
+│       │       ├── detail.jsp
+│       │       └── view.jsp
+│       └── index.jsp
+└── README.md
 
-# 5. 소감
+```
+<br>
+
+# 5. 구현 화면 예시
+
+### 1. 회원가입 화면
+![회원가입 화면](images/회원가입화면.png)
+
+### 2. 로그인 화면
+![로그인 화면](images/로그인화면.png)
+
+### 3. 영상 등록 화면
+![영상 등록](images/영상등록.png)
+
+### 4. 영상 목록 조회 화면
+![영상 목록 조회](images/영상목록조회.png)
+
+### 5. 리뷰 게시판 화면
+![리뷰 게시판](images/리뷰게시판.png)
+
+### 6. 리뷰 목록 조회 화면
+![리뷰 목록 조회](images/리뷰목록조회.png)
+
+
+# 6. 소감
 이번 SSAFIT 프로젝트를 진행하면서 기획에 그치지 않고, MVC의 흐름을 직접 설계하고 적용해볼 수 있어서 의미있었던 것 같습니다.
 특히 각 계층의 역할을 직접 설계해보면서 더 자세하게 이해할 수 있어서 좋았습니다.
 이를 통해 코드 명과 코드를 이해하기 쉽게 잘 작성하는 것이 왜 중요한 지에 대해 체감할 수 있었던 것 같습니다.
