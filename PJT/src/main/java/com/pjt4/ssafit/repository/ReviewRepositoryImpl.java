@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.pjt4.ssafit.dto.User.Review;
+import com.pjt4.ssafit.util.DBUtil;
 
 public class ReviewRepositoryImpl implements ReviewRepository {
 
-	private List<Review> list = new ArrayList<>();
-
+	private DBUtil util = DBUtil.getInstance();
+	
+	/////////////////////////////////////// 싱글턴
 	private static ReviewRepository repo = new ReviewRepositoryImpl();
 
 	private ReviewRepositoryImpl() {
@@ -18,50 +20,32 @@ public class ReviewRepositoryImpl implements ReviewRepository {
 	public static ReviewRepository getInstance() {
 		return repo;
 	}
-
+	////////////////////////////////////////////
+	
 	@Override
 	public List<Review> selectAll() {
-		return list;
+		return null;
 	}
 
 	@Override
 	public Review selectOne(int id) {
-		for (Review review : list) {
-			if (review.getId() == id)
-				return review;
-		}
 		return null;
 	}
 
 	@Override
 	public void insertReview(Review review) {
-		list.add(review);
 	}
 
 	@Override
 	public void updateViewCnt(int id) {
-		Review review = list.get(id);
-		review.setViewCnt(review.getViewCnt() + 1);
 	}
 
 	@Override
 	public void updateReview(Review review) {
-		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i).getId() == review.getId()) {
-				list.set(i, review); 
-				return;
-			}
-		}
 	}
 
 	@Override
 	public void deleteReview(int id) {
-		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i).getId() == id) {
-				list.remove(i);
-				return;
-			}
-		}
 
 	}
 

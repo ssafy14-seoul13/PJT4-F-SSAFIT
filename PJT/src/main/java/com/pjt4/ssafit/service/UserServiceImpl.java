@@ -1,5 +1,7 @@
 package com.pjt4.ssafit.service;
 
+import java.util.List;
+
 import com.pjt4.ssafit.dto.User.User;
 import com.pjt4.ssafit.repository.UserRepository;
 import com.pjt4.ssafit.repository.UserRepositoryImpl;
@@ -20,11 +22,16 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	@Override
+	public List<User> getList() {
+		return userRepo.selectAll();
+	}
+	
+	@Override
 	public User getUser(String userId) {
 		
 		return userRepo.selectOne(userId);
 	}
-
+	
 	@Override
 	public boolean RegistUser(User user) {
 		
@@ -60,5 +67,7 @@ public class UserServiceImpl implements UserService {
 		}
 		
 	}
+
+	
 
 }

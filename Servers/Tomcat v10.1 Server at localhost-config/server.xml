@@ -22,15 +22,10 @@
   <!-- Security listener. Documentation at /docs/config/listeners.html
   <Listener className="org.apache.catalina.security.SecurityListener" />
   -->
-<<<<<<< HEAD
   <!-- OpenSSL support using Tomcat Native -->
   <Listener className="org.apache.catalina.core.AprLifecycleListener"/>
   <!-- OpenSSL support using FFM API from Java 22 -->
   <!-- <Listener className="org.apache.catalina.core.OpenSSLLifecycleListener" /> -->
-=======
-  <!-- APR library loader. Documentation at /docs/apr.html -->
-  <Listener SSLEngine="on" className="org.apache.catalina.core.AprLifecycleListener"/>
->>>>>>> sy
   <!-- Prevent memory leaks due to use of particular java/javax APIs-->
   <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener"/>
   <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener"/>
@@ -91,11 +86,7 @@
         <UpgradeProtocol className="org.apache.coyote.http2.Http2Protocol" />
         <SSLHostConfig>
             <Certificate certificateKeystoreFile="conf/localhost-rsa.jks"
-<<<<<<< HEAD
                          certificateKeystorePassword="changeit" type="RSA" />
-=======
-                         type="RSA" />
->>>>>>> sy
         </SSLHostConfig>
     </Connector>
     -->
@@ -151,11 +142,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-<<<<<<< HEAD
       <Context docBase="PJT" path="/PJT" reloadable="true" source="org.eclipse.jst.jee.server:PJT"/></Host>
-=======
-      </Host>
->>>>>>> sy
     </Engine>
   </Service>
 </Server>

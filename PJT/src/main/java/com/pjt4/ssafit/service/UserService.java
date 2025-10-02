@@ -1,10 +1,12 @@
 package com.pjt4.ssafit.service;
 
+import java.util.List;
+
 import com.pjt4.ssafit.dto.User.User;
 
 public interface UserService {
-		// 전체 게시글 조회
-//		public abstract List<Board> getList();
+		// 전체 유저 조회
+		public abstract List<User> getList();
 		// 유저 조회
 		public abstract User getUser(String userId);
 

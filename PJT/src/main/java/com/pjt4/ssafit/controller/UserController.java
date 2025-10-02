@@ -1,6 +1,7 @@
 package com.pjt4.ssafit.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import com.pjt4.ssafit.dto.User.User;
 import com.pjt4.ssafit.service.UserService;
@@ -35,6 +36,9 @@ public class UserController extends HttpServlet{
 	        case "registForm":
 	            request.getRequestDispatcher("/WEB-INF/user/regist.jsp").forward(request, response);
 	            break;
+	        case "viewForm":
+	            doList(request, response);
+	            break;
 			case "login":  
 				doLogin(request, response);
 				break;
@@ -49,6 +53,15 @@ public class UserController extends HttpServlet{
 				break;
 
 		}
+	}
+	
+	private void doList(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		List<User> userList = userService.getList();
+		
+		
+		request.setAttribute("userList", userList);
+		request.getRequestDispatcher("/WEB-INF/user/view.jsp").forward(request, response);
 	}
 
 	private void doLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

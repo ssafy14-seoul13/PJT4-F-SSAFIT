@@ -1,7 +1,6 @@
 package com.pjt4.ssafit.dto.User;
 
 public class Video {
-	public static int no = 1;
     private int id;
     private String title;
     private String part; // 운동 부위
@@ -12,7 +11,6 @@ public class Video {
 	}
 	
 	public Video(String title, String part, String url) {
-	    this.id = no++;
 	    this.title = title;
 	    this.part = part;
 	    this.url = url;
