@@ -10,6 +10,8 @@ public class Review implements Serializable{
 	private String content;
 	private String regDate;
 	private int viewCnt;
+	private int videoId;
+	private String videoTitle;
 	
 	
 	public Review() {
@@ -22,7 +24,6 @@ public class Review implements Serializable{
 		this.viewCnt = 0;
 		this.regDate = new Date().toString();
 	}
-	
 
 	public int getId() {
 		return id;
@@ -72,10 +73,26 @@ public class Review implements Serializable{
 		this.viewCnt = viewCnt;
 	}
 
+	public int getVideoId() {
+		return videoId;
+	}
+
+	public void setVideoId(int videoId) {
+		this.videoId = videoId;
+	}
+
+	public String getVideoTitle() {
+		return videoTitle;
+	}
+
+	public void setVideoTitle(String videoTitle) {
+		this.videoTitle = videoTitle;
+	}
+	
 	@Override
 	public String toString() {
 		return "Review [id=" + id + ", title=" + title + ", writer=" + writer + ", content=" + content + ", regDate="
-				+ regDate + ", viewCnt=" + viewCnt + "]";
+				+ regDate + ", viewCnt=" + viewCnt + ", videoId=" + videoId + "]";
 	}
 
 }

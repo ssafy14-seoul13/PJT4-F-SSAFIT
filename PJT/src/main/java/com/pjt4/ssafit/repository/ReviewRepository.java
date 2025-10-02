@@ -9,7 +9,10 @@ public interface ReviewRepository {
 	public abstract List<Review> selectAll();
 
 	// 게시글 조회하기
-	public abstract Review selectOne(int id);
+	public abstract Review selectOneById(int id);
+	
+	// 게시글 조회하기 - 제목 키워드 검색
+	public abstract List<Review> selectByTitle(String keyword);
 
 	// 게시글 등록하기
 	public abstract void insertReview(Review review);

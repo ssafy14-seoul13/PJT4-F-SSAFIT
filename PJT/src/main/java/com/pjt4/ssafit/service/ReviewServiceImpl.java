@@ -26,11 +26,19 @@ public class ReviewServiceImpl implements ReviewService {
 	}
 
 	@Override
-	public Review getReview(int id) {
-		repo.updateViewCnt(id);
-		return repo.selectOne(id);
+	public Review getReviewById(int id) {
+	    repo.updateViewCnt(id);
+	    return repo.selectOneById(id);
 	}
-
+	
+	@Override
+	public List<Review> getReviewByTitle(String keyword) {
+	    if (keyword == null || keyword.isEmpty()) {
+	        return repo.selectAll();
+	    }
+	    return repo.selectByTitle(keyword);
+	}
+	
 	@Override
 	public void writeReview(Review review) {
 		repo.insertReview(review);

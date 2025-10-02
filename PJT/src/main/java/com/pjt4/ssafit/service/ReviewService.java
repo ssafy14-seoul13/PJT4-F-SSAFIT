@@ -8,9 +8,12 @@ public interface ReviewService {
 	// 전체 게시글 조회
 	public abstract List<Review> getList();
 
-	// 게시글 조회
-	public abstract Review getReview(int id);
+	// 게시글 조회 - id
+	public abstract Review getReviewById(int id);
 
+	// 게시글 조회 - 제목 keyword
+	public abstract List<Review> getReviewByTitle(String keyword);
+	
 	// 게시글 작성
 	public abstract void writeReview(Review review);
 
